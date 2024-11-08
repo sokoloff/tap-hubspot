@@ -14,21 +14,20 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = "<3.13,>=3.7.1"
-backports-datetime-fromisoformat = {version = "^2.0.1", python = "<3.11"}
-cached-property = "^1" # Remove after Python 3.7 support is dropped
+python = "<3.13,>=3.8"
+backports-datetime-fromisoformat = {version = "^2.0.2", python = "<3.11"}
 fs-s3fs = { version = "^1.1.1", optional = true }
-requests = "^2.28.2"
-singer-sdk = { version="^0.33.1" }
+requests = "^2.32.3"
+singer-sdk = { version="^0.41.0" }
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^7.2.1"
-singer-sdk = { version="^0.33.1", extras = ["testing"] }
+pytest = "^7.4.4"
+singer-sdk = { version="^0.41.0", extras = ["testing"] }
 
 [tool.isort]
 profile = "black"
 multi_line_output = 3 # Vertical Hanging Indent
-src_paths = "tap_linkedin"
+src_paths = "tap_hubspot"
 
 [tool.poetry.extras]
 s3 = ["fs-s3fs"]
